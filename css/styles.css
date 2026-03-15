@@ -145,6 +145,52 @@ a {
     border: none;
     color: var(--text-white);
     cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 15, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    z-index: 99;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem;
+    color: var(--text-gray);
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+    background: var(--bg-hover);
+    color: var(--text-white);
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .mobile-menu:not(.active) {
+        display: none;
+    }
 }
 
 /* Hero */
@@ -866,4 +912,36 @@ a {
         gap: 0.5rem;
         text-align: center;
     }
+}
+
+/* Ko-fi Floating Button */
+.kofiFloatingBtn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--brand-primary);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.kofiFloatingBtn:hover {
+    background: var(--brand-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(139, 92, 246, 0.5);
+}
+
+.kofiFloatingBtn svg {
+    width: 20px;
+    height: 20px;
 }

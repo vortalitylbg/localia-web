@@ -46,8 +46,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.querySelector('.mobile-menu');
     
     if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
         });
     }
 });
