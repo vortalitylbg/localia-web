@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation - Localia</title>
+    <meta name="description" content="Guide d'installation de Localia sur votre serveur">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <i data-lucide="music"></i>
+                </div>
+                <span>Localia</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html#features" class="nav-link">Fonctionnalités</a>
+                <a href="installation.html" class="nav-link">Installation</a>
+                <a href="tutoriel.html" class="nav-link">Guide</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+                <a href="payment.html" class="nav-cta">Soutenir</a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Installation</h1>
+            <p>Transformez votre ordinateur en serveur de musique en quelques étapes simples</p>
+        </div>
+    </section>
+
+    <!-- Installation -->
+    <section class="section">
+        <div class="container">
+            <div class="installation-grid">
+                <div class="steps">
+                    <!-- Step 1 -->
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Installer Node.js</h3>
+                            <p>Téléchargez et installez Node.js (version 18 ou supérieure).</p>
+                            <div class="code-block">node --version</div>
+                            <p style="margin-top: 0.75rem; font-size: 0.875rem; color: var(--text-muted);">
+                                🔗 Téléchargez sur: <a href="https://nodejs.org" target="_blank" style="color: var(--brand-primary);">nodejs.org</a>
+                            </p>
+                            <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--text-muted);">
+                                Windows: lancez l'installateur .msi<br>
+                                macOS: utilisez le package .pkg ou brew install node<br>
+                                Linux: <code style="color: var(--brand-primary);">curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs</code>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Récupérer le code</h3>
+                            <p>Clonez ou téléchargez le code source.</p>
+                            <div class="code-block">git clone https://github.com/votre-repo/localify.git</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Installer les dépendances</h3>
+                            <p>Installez les paquets nécessaires.</p>
+                            <div class="code-block">cd localify && npm install</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Lancer Localia</h3>
+                            <p>Démarrez le serveur de développement.</p>
+                            <div class="code-block">npm run dev</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Ajouter votre musique</h3>
+                            <p>Placez vos fichiers dans le dossier /music ou utilisez l'upload via l'interface.</p>
+                            <div class="code-block">/music/artist - title.flac</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="access-card">
+                    <h3>Accéder à Localia</h3>
+                    
+                    <div class="access-item">
+                        <p class="access-label">Depuis le serveur</p>
+                        <p class="access-value">http://localhost:5173</p>
+                    </div>
+                    
+                    <div class="access-item">
+                        <p class="access-label">Depuis un autre appareil</p>
+                        <p class="access-value">http://192.168.1.x:5173</p>
+                    </div>
+                    
+                    <div class="access-item">
+                        <p class="access-label">API Backend</p>
+                        <p class="access-value">http://192.168.1.x:5000</p>
+                    </div>
+                    
+                    <div class="access-note">
+                        <i data-lucide="info" style="width: 20px; height: 20px; flex-shrink: 0;"></i>
+                        <p>Remplacez 192.168.1.x par l'adresse IP de votre serveur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="section" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="features-header">
+                <h2>Conseils</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="wifi"></i>
+                    </div>
+                    <h3>Connexion réseau</h3>
+                    <p>Connectez votre serveur en Ethernet pour une meilleure stabilité et vitesse de streaming.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="shield"></i>
+                    </div>
+                    <h3>Sécurité</h3>
+                    <p>Activez les codes PIN pour chaque profil utilisateur dans les paramètres.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="folder"></i>
+                    </div>
+                    <h3>Organisation</h3>
+                    <p>Nommez vos fichiers ainsi: "Artiste - Titre.mp3" pour de meilleures métadonnées.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">
+                            <i data-lucide="music"></i>
+                        </div>
+                        <span>Localia</span>
+                    </a>
+                    <p>Votre lecteur de musique local nouvelle génération.</p>
+                </div>
+                
+                <div>
+                    <h4>Liens</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Fonctionnalités</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="tutoriel.html">Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="cgu.html">CGU</a></li>
+                        <li><a href="politique.html">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Localia. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

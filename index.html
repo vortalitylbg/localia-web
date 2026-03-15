@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localia - Votre lecteur de musique local</title>
+    <meta name="description" content="Localia est un lecteur de musique local moderne avec interface web, gestion multi-utilisateurs et contrôle Gamepad.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <i data-lucide="music"></i>
+                </div>
+                <span>Localia</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Fonctionnalités</a>
+                <a href="installation.html" class="nav-link">Installation</a>
+                <a href="tutoriel.html" class="nav-link">Guide</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="payment.html" class="nav-cta">Soutenir</a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        <span>Version 1.0 disponible</span>
+                    </div>
+                    
+                    <h1>Votre musique, <span>partout</span> chez vous</h1>
+                    
+                    <p class="hero-description">
+                        Transformez votre ordinateur en serveur de musique. 
+                        Localia est un lecteur de musique local avec interface web moderne, 
+                        gestion multi-utilisateurs et contrôle Gamepad.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="installation.html" class="btn btn-primary">
+                            <i data-lucide="download"></i>
+                            Installer
+                        </a>
+                        <a href="#features" class="btn btn-secondary">
+                            <i data-lucide="play"></i>
+                            Découvrir
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <p class="hero-stat-value">100%</p>
+                            <p class="hero-stat-label">Gratuit</p>
+                        </div>
+                        <div class="hero-stat">
+                            <p class="hero-stat-value">Multi</p>
+                            <p class="hero-stat-label">Utilisateurs</p>
+                        </div>
+                        <div class="hero-stat">
+                            <p class="hero-stat-value">Local</p>
+                            <p class="hero-stat-label">Données</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="app-preview">
+                    <div class="app-mockup">
+                        <div class="app-mockup-header">
+                            <span class="app-mockup-dot red"></span>
+                            <span class="app-mockup-dot yellow"></span>
+                            <span class="app-mockup-dot green"></span>
+                        </div>
+                        <div class="app-mockup-content">
+                            <div class="app-mockup-track">
+                                <div class="app-mockup-cover"></div>
+                                <div class="app-mockup-track-info">
+                                    <p class="app-mockup-track-title">Musique démo</p>
+                                    <p class="app-mockup-track-artist">Artiste Example</p>
+                                </div>
+                            </div>
+                            <div class="app-mockup-track">
+                                <div class="app-mockup-cover" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);"></div>
+                                <div class="app-mockup-track-info">
+                                    <p class="app-mockup-track-title">另一首歌曲</p>
+                                    <p class="app-mockup-track-artist">藝術家</p>
+                                </div>
+                            </div>
+                            <div class="app-mockup-track">
+                                <div class="app-mockup-cover" style="background: linear-gradient(135deg, #f97316, #ef4444);"></div>
+                                <div class="app-mockup-track-info">
+                                    <p class="app-mockup-track-title">Track Example</p>
+                                    <p class="app-mockup-track-artist">Artist Name</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-mockup-player">
+                            <div class="app-mockup-cover"></div>
+                            <div class="app-mockup-player-track">
+                                <p class="app-mockup-player-title">Musique démo</p>
+                                <p class="app-mockup-player-artist">En lecture</p>
+                            </div>
+                            <div class="app-mockup-player-controls">
+                                <i data-lucide="skip-back" style="width: 16px; height: 16px;"></i>
+                                <i data-lucide="play" style="width: 20px; height: 20px;"></i>
+                                <i data-lucide="skip-forward" style="width: 16px; height: 16px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section features">
+        <div class="container">
+            <div class="features-header">
+                <h2>Fonctionnalités</h2>
+                <p>Une application complète pour gérer votre musique locale</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3>Interface Web</h3>
+                    <p>Accédez à votre musique depuis n'importe quel appareil connecté au même réseau WiFi.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Multi-Utilisateurs</h3>
+                    <p>Créez plusieurs profils avec codes PIN. Chacun a ses propres playlists et recommandations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="gamepad-2"></i>
+                    </div>
+                    <h3>Contrôle Gamepad <span style="font-size: 0.75rem; background: var(--bg-hover); padding: 0.125rem 0.5rem; border-radius: 9999px; color: var(--text-muted);">Bêta</span></h3>
+                    <p>Contrôlez la musique avec votre manette Xbox, PlayStation ou autre. En cours de développement.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="sliders"></i>
+                    </div>
+                    <h3>Égaliseur Audio</h3>
+                    <p>Personnalisez le son avec l'égaliseur intégré et ses présélections.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="folder-music"></i>
+                    </div>
+                    <h3>Lecture Locale</h3>
+                    <p>Aucune dépendance cloud. Votre musique reste sur votre serveur.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="upload"></i>
+                    </div>
+                    <h3>Upload Simple</h3>
+                    <p>Glissez-déposez vos fichiers directement depuis l'interface web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation CTA -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2>Prêt à commencer?</h2>
+                <p style="margin: 1rem 0 2rem;">Suivez notre guide d'installation simple</p>
+                <a href="installation.html" class="btn btn-primary">
+                    <i data-lucide="arrow-right"></i>
+                    Voir le guide
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="features-header">
+                <h2>Questions fréquentes</h2>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Localia est-il gratuit?
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, Localia est entièrement gratuit et open source. Cependant, si vous souhaitez soutenir le développement, vous pouvez faire un don optionnel.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Puis-je utiliser Localia sur plusieurs appareils?
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui! Tous les appareils connectés au même réseau local peuvent y accéder via leur navigateur web.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Mes fichiers musicaux sont-ils sécurisés?
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolument. Localia fonctionne entièrement en local. Aucune donnée n'est envoyée sur internet.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Quels formats audio sont supportés?
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>MP3, FLAC, WAV, OGG et M4A. Les métadonnées sont automatiquement récupérées.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">
+                            <i data-lucide="music"></i>
+                        </div>
+                        <span>Localia</span>
+                    </a>
+                    <p>Votre lecteur de musique local nouvelle génération. Simple, moderne et gratuit.</p>
+                </div>
+                
+                <div>
+                    <h4>Liens</h4>
+                    <ul class="footer-links">
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="tutoriel.html">Guide</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="payment.html">Soutenir</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="cgu.html">CGU</a></li>
+                        <li><a href="politique.html">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Localia. Tous droits réservés.</p>
+                <p>Fait pour la musique locale</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
