@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Localia - Votre lecteur de musique local</title>
-    <meta name="description" content="Localia est un lecteur de musique local moderne avec interface web, gestion multi-utilisateurs et contrôle Gamepad.">
+    <title>Localia - Lecteur de musique local gratuit et open source</title>
+    <meta name="description" content="Localia est un lecteur de musique local gratuit et open source. Interface web moderne, multi-utilisateurs, controle Gamepad. Pour PC et Raspberry Pi.">
+    <meta name="keywords" content="lecteur musique, lecteur mp3, musique locale, streaming local, open source, gratuit, raspberry pi, auto-hebergement">
+    <meta name="author" content="Timothee Charruau">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="French">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://localia.online/">
+    <meta property="og:title" content="Localia - Lecteur de musique local gratuit">
+    <meta property="og:description" content="Lecteur de musique local open source et gratuit. Interface moderne, multi-utilisateurs, controle Gamepad.">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Localia - Lecteur de musique local gratuit">
+    <meta name="twitter:description" content="Lecteur de musique local open source et gratuit.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://localia.online/">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♪</text></svg>">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +34,29 @@
     
     <!-- Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Localia",
+        "description": "Lecteur de musique local gratuit et open source avec interface web moderne, gestion multi-utilisateurs et controle Gamepad.",
+        "url": "https://localia.online/",
+        "author": {
+            "@type": "Person",
+            "name": "Timothee Charruau"
+        },
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Windows, Mac, Linux, Raspberry Pi",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "license": "https://opensource.org/licenses/MIT"
+    }
+    </script>
     
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
@@ -73,7 +114,11 @@
                         </a>
                         <a href="#features" class="btn btn-secondary">
                             <i data-lucide="play"></i>
-                            Découvrir
+                            Decouvrir
+                        </a>
+                        <a href="payment.html" class="btn btn-secondary" style="border: 1px solid var(--brand-primary);">
+                            <i data-lucide="heart"></i>
+                            Soutenir
                         </a>
                     </div>
                     
@@ -155,7 +200,7 @@
                         <i data-lucide="globe"></i>
                     </div>
                     <h3>Interface Web</h3>
-                    <p>Accédez à votre musique depuis n'importe quel appareil connecté au même réseau WiFi.</p>
+                    <p>Accedez a votre musique depuis n'importe quel appareil connecte au meme reseau WiFi.</p>
                 </div>
                 
                 <div class="feature-card">
@@ -163,31 +208,15 @@
                         <i data-lucide="users"></i>
                     </div>
                     <h3>Multi-Utilisateurs</h3>
-                    <p>Créez plusieurs profils avec codes PIN. Chacun a ses propres playlists et recommandations.</p>
+                    <p>Creez plusieurs profils avec codes PIN. Chacun a ses propres playlists et recommandations.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i data-lucide="gamepad-2"></i>
                     </div>
-                    <h3>Contrôle Gamepad <span style="font-size: 0.75rem; background: var(--bg-hover); padding: 0.125rem 0.5rem; border-radius: 9999px; color: var(--text-muted);">Bêta</span></h3>
-                    <p>Contrôlez la musique avec votre manette Xbox, PlayStation ou autre.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="sliders"></i>
-                    </div>
-                    <h3>Égaliseur Audio</h3>
-                    <p>Personnalisez le son avec l'égaliseur intégré et ses présélections.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="folder-music"></i>
-                    </div>
-                    <h3>Lecture Locale</h3>
-                    <p>Aucune dépendance cloud. Votre musique reste sur votre serveur.</p>
+                    <h3>Controle Gamepad <span style="font-size: 0.75rem; background: var(--bg-hover); padding: 0.125rem 0.5rem; border-radius: 9999px; color: var(--text-muted);">Beta</span></h3>
+                    <p>Controlez la musique avec votre manette Xbox, PlayStation ou autre.</p>
                 </div>
                 
                 <div class="feature-card">
@@ -195,47 +224,15 @@
                         <i data-lucide="upload"></i>
                     </div>
                     <h3>Upload Simple</h3>
-                    <p>Glissez-déposez vos fichiers directement depuis l'interface web.</p>
+                        <p>Glissez-deposez vos fichiers directement depuis l'interface web.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="heart"></i>
-                    </div>
-                    <h3>Favoris</h3>
-                    <p>Likez vos titres préférés et retrouvez-les facilement.</p>
-                </div>
-                
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i data-lucide="list-music"></i>
                     </div>
-                    <h3>File d'Attente</h3>
-                    <p>Gérez facilement la prochaine chanson à écouter.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="search"></i>
-                    </div>
-                    <h3>Recherche Avancée</h3>
-                    <p>Trouvez rapidement vos titres par titre, artiste ou album.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="bar-chart-2"></i>
-                    </div>
-                    <h3>Statistiques</h3>
-                    <p>Suivez votre temps d'écoute et découvrez vos titres favoris.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="tv"></i>
-                    </div>
-                    <h3>Mode TV</h3>
-                    <p>Interface optimisée pour les écrans de salon.</p>
+                    <h3>Playlists</h3>
+                    <p>Creez et organisez vos playlists facilement.</p>
                 </div>
 
                 <div class="feature-card">
@@ -263,6 +260,23 @@
         </div>
     </section>
 
+    <!-- Support CTA -->
+    <section class="section" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 style="margin-bottom: 1rem;">Appreciez Localia?</h2>
+                <p style="margin-bottom: 2rem; color: #9ca3af;">
+                    Cette application est entierement gratuite et sans pubs. 
+                    Si vous l'appreciez, considerez un petit don pour soutenir le projet.
+                </p>
+                <a href="payment.html" class="btn btn-primary">
+                    <i data-lucide="heart"></i>
+                    Soutenir le projet
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ -->
     <section id="faq" class="section">
         <div class="container">
@@ -277,7 +291,7 @@
                         <i data-lucide="chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Oui, Localia est entièrement gratuit et open source. Cependant, si vous souhaitez soutenir le développement, vous pouvez faire un don optionnel.</p>
+                        <p>Oui, Localia est entierement gratuit et open source. Cependant, si vous souhaitez soutenir le developpement, vous pouvez <a href="payment.html" style="color: #8b5cf6;">faire un don</a>.</p>
                     </div>
                 </div>
                 

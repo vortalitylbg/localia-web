@@ -3,191 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide d'utilisation - Localia</title>
-    <meta name="description" content="Guide complet pour utiliser Localia">
+    <title>Guide - Localia</title>
+    <meta http-equiv="refresh" content="0;url=https://github.com/vortalitylbg/localia#readme">
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♪</text></svg>">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: #0a0a0f; 
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .container { max-width: 600px; }
+        h1 { font-size: 2rem; margin-bottom: 1rem; }
+        p { color: #9ca3af; margin-bottom: 2rem; }
+        a { 
+            display: inline-block;
+            background: #8b5cf6; 
+            color: #fff; 
+            padding: 1rem 2rem; 
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        a:hover { transform: scale(1.05); }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <div class="nav-logo-icon">
-                    <i data-lucide="music"></i>
-                </div>
-                <span>Localia</span>
-            </a>
-            
-            <div class="nav-links">
-                <a href="index.html#features" class="nav-link">Fonctionnalités</a>
-                <a href="installation.html" class="nav-link">Installation</a>
-                <a href="tutoriel.html" class="nav-link">Guide</a>
-                <a href="index.html#faq" class="nav-link">FAQ</a>
-                <a href="payment.html" class="nav-cta">Soutenir</a>
-            </div>
-            
-            <button class="mobile-menu-btn">
-                <i data-lucide="menu"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Guide d'utilisation</h1>
-            <p>Apprenez à utiliser toutes les fonctionnalités de Localia</p>
-        </div>
-    </section>
-
-    <!-- Tutorial -->
-    <section class="section">
-        <div class="container">
-            <div class="tutorial-grid">
-                <!-- Créer un profil -->
-                <div class="tutorial-card">
-                    <div class="tutorial-card-header">
-                        <h3><i data-lucide="user-plus"></i> Créer un profil</h3>
-                    </div>
-                    <div class="tutorial-card-content">
-                        <ol class="tutorial-list">
-                            <li><span>1.</span> Cliquez sur "Create Account" sur l'écran de connexion</li>
-                            <li><span>2.</span> Entrez un nom d'utilisateur (2-20 caractères)</li>
-                            <li><span>3.</span> Optionnel: Ajoutez un code PIN à 4 chiffres</li>
-                            <li><span>4.</span> Cliquez sur "Create" - vous êtes connecté!</li>
-                        </ol>
-                    </div>
-                </div>
-                
-                <!-- Ajouter de la musique -->
-                <div class="tutorial-card">
-                    <div class="tutorial-card-header">
-                        <h3><i data-lucide="upload"></i> Ajouter de la musique</h3>
-                    </div>
-                    <div class="tutorial-card-content">
-                        <ol class="tutorial-list">
-                            <li><span>1.</span> Cliquez sur l'icône <strong style="color: var(--text-white);">upload</strong> dans la barre latérale (à côté du logo)</li>
-                            <li><span>2.</span> Glissez-déposez vos fichiers ou cliquez pour parcourir</li>
-                            <li><span>3.</span> Formats: MP3, FLAC, WAV, OGG, M4A</li>
-                            <li><span>4.</span> Les métadonnées sont récupérées automatiquement</li>
-                        </ol>
-                    </div>
-                </div>
-                
-                <!-- Créer une playlist -->
-                <div class="tutorial-card">
-                    <div class="tutorial-card-header">
-                        <h3><i data-lucide="list-plus"></i> Créer une playlist</h3>
-                    </div>
-                    <div class="tutorial-card-content">
-                        <ol class="tutorial-list">
-                            <li><span>1.</span> Cliquez sur le bouton <strong style="color: var(--text-white);">+</strong> à côté de "Playlists" dans le menu latéral</li>
-                            <li><span>2.</span> Donnez un nom à votre playlist</li>
-                            <li><span>3.</span> Appuyez sur Entrée ou cliquez en dehors</li>
-                            <li><span>4.</span> Pour ajouter des titres: utilisez le menu (•••) → Add to playlist</li>
-                        </ol>
-                    </div>
-                </div>
-                
-                <!-- Utiliser le Gamepad -->
-                <div class="tutorial-card">
-                    <div class="tutorial-card-header">
-                        <h3><i data-lucide="gamepad-2"></i> Gamepad (Bêta)</h3>
-                    </div>
-                    <div class="tutorial-card-content">
-                        <ol class="tutorial-list">
-                            <li><span>1.</span> Connectez votre manette (Xbox, PlayStation, etc.)</li>
-                            <li><span>2.</span> Appuyez sur une touche pour activer le mode gamepad</li>
-                            <li><span>3.</span> Utilisez le stick pour naviguer</li>
-                            <li><span>4.</span> A/X = valider, B/O = revenir</li>
-                        </ol>
-                        <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted); font-style: italic;">
-                            ⚠️ Fonctionnalité en développement. Des bugs peuvent survenir.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Contrôles clavier -->
-                <div class="tutorial-card">
-                    <div class="tutorial-card-header">
-                        <h3><i data-lucide="keyboard"></i> Contrôles clavier</h3>
-                    </div>
-                    <div class="tutorial-card-content">
-                        <ol class="tutorial-list">
-                            <li><span>Espace</span> Lecture/Pause</li>
-                            <li><span>Flèches</span> Volume et seek (±5s)</li>
-                            <li><span>N</span> Piste suivante</li>
-                            <li><span>P</span> Piste précédente</li>
-                            <li><span>G</span> Mode console Gamepad</li>
-                        </ol>
-                    </div>
-                </div>
-                
-                <!-- Égaliseur -->
-                <div class="tutorial-card">
-                    <div class="tutorial-card-header">
-                        <h3><i data-lucide="sliders"></i> Utiliser l'égaliseur</h3>
-                    </div>
-                    <div class="tutorial-card-content">
-                        <ol class="tutorial-list">
-                            <li><span>1.</span> Cliquez sur votre profil en bas à gauche</li>
-                            <li><span>2.</span> Sélectionnez "Paramètres"</li>
-                            <li><span>3.</span> Choisissez un preset ou réglez manuellement</li>
-                            <li><span>4.</span> Présélections: Flat, Bass, Rock, Electronic...</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="nav-logo">
-                        <div class="nav-logo-icon">
-                            <i data-lucide="music"></i>
-                        </div>
-                        <span>Localia</span>
-                    </a>
-                    <p>Votre lecteur de musique local nouvelle génération.</p>
-                </div>
-                
-                <div>
-                    <h4>Liens</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html#features">Fonctionnalités</a></li>
-                        <li><a href="installation.html">Installation</a></li>
-                        <li><a href="tutoriel.html">Guide</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Légal</h4>
-                    <ul class="footer-links">
-                        <li><a href="mentions-legales.html">Mentions légales</a></li>
-                        <li><a href="cgu.html">CGU</a></li>
-                        <li><a href="politique.html">Confidentialité</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Localia. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
+    <div class="container">
+        <h1>Redirection...</h1>
+        <p>Vous allez etre redirige vers la documentation complete sur GitHub</p>
+        <a href="https://github.com/vortalitylbg/localia#readme">Voir la documentation</a>
+    </div>
 </body>
 </html>
