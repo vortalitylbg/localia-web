@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
     color: var(--text-gray);
     line-height: 1.6;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Typography */
@@ -67,6 +69,8 @@ a {
     background: rgba(10, 10, 15, 0.9);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .nav-container {
@@ -138,39 +142,62 @@ a {
     background: var(--brand-hover);
 }
 
-/* Mobile menu */
+/* Mobile menu button */
 .mobile-menu-btn {
     display: none;
-    background: none;
-    border: none;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     color: var(--text-white);
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
 }
 
+.mobile-menu-btn:hover {
+    background: var(--bg-hover);
+    border-color: var(--brand-primary);
+}
+
+.mobile-menu-btn svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Mobile menu */
 .mobile-menu {
     display: none;
     position: fixed;
     top: 64px;
     left: 0;
     right: 0;
+    bottom: 0;
     background: rgba(10, 10, 15, 0.98);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
+    overflow-x: hidden;
     padding: 1rem;
     z-index: 99;
+    overflow-y: auto;
 }
 
 .mobile-menu.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .mobile-menu a {
-    display: block;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
     color: var(--text-gray);
     border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
     transition: all 0.2s;
+    text-decoration: none;
 }
 
 .mobile-menu a:hover,
@@ -179,15 +206,18 @@ a {
     color: var(--text-white);
 }
 
+.mobile-menu a.nav-cta {
+    background: var(--brand-primary);
+    color: white;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.mobile-menu a.nav-cta:hover {
+    background: var(--brand-hover);
+}
+
 @media (max-width: 768px) {
-    .mobile-menu {
-        display: block;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
-    
     .mobile-menu:not(.active) {
         display: none;
     }
@@ -198,7 +228,6 @@ a {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 64px;
     background: var(--bg-primary);
 }
 
@@ -286,6 +315,16 @@ a {
 
 .btn-secondary:hover {
     background: var(--bg-hover);
+}
+
+@media (hover: none) {
+    .btn:hover {
+        transform: none;
+    }
+    
+    .btn:active {
+        transform: scale(0.98);
+    }
 }
 
 .hero-stats {
@@ -525,6 +564,50 @@ a {
     font-size: 0.875rem;
     color: var(--brand-primary);
     overflow-x: auto;
+    max-width: 100%;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.platform-cards {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.platform-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.platform-card:hover {
+    border-color: var(--brand-primary);
+    background: var(--bg-hover);
+}
+
+.platform-card svg {
+    width: 32px;
+    height: 32px;
+    color: var(--brand-primary);
+}
+
+.platform-card span {
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+.platform-card small {
+    font-size: 0.75rem;
+    color: var(--text-muted);
 }
 
 .access-card {
@@ -869,6 +952,16 @@ a {
     h1 { font-size: 2.25rem; }
     h2 { font-size: 1.75rem; }
     
+    .container {
+        padding: 0 1rem;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .section {
+        padding: 5rem 1rem 3rem;
+    }
+    
     .nav-links {
         display: none;
     }
@@ -877,25 +970,64 @@ a {
         display: block;
     }
     
+    .nav {
+        padding: 1rem 0;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: 5rem 0 3rem;
+    }
+    
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
     }
     
     .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
         justify-content: center;
     }
     
     .hero-stats {
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 1.5rem;
     }
     
     .features-grid {
         grid-template-columns: 1fr;
     }
     
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
     .tutorial-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .installation-steps {
+        padding: 1rem;
+    }
+    
+    .installation-step {
+        padding: 1.5rem;
     }
     
     .footer-grid {
@@ -911,6 +1043,39 @@ a {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
+    }
+    
+    .legal-content {
+        padding: 0 1rem;
+    }
+    
+    .page-header {
+        padding: 5rem 1rem 2rem;
+    }
+    
+    .installation-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .access-card {
+        position: static;
+        margin-top: 2rem;
+    }
+    
+    .installation-steps {
+        padding: 1rem;
+    }
+    
+    .code-block {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        word-break: break-all;
+        font-size: 0.75rem;
+    }
+    
+    .access-value {
+        word-break: break-all;
+        font-size: 0.875rem;
     }
 }
 

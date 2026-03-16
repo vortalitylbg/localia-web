@@ -113,7 +113,32 @@
             width: 64px;
             height: 64px;
             margin-bottom: 1.5rem;
-            color: #29abe0;
+            color: var(--brand-primary);
+        }
+        
+        @media (max-width: 768px) {
+            .support-hero {
+                padding: 2rem 1rem 1rem;
+            }
+            .support-hero h1 {
+                font-size: 2rem;
+            }
+            .support-hero p {
+                font-size: 1rem;
+            }
+            .support-card {
+                padding: 1.5rem;
+                margin: 0 1rem;
+            }
+            .other-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .other-link {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -148,7 +173,7 @@
         <a href="installation.html" class="nav-link">Installation</a>
         <a href="tutoriel.html" class="nav-link">Guide</a>
         <a href="index.html#faq" class="nav-link">FAQ</a>
-        <a href="payment.html" class="nav-link" style="color: var(--brand-primary);">Soutenir</a>
+        <a href="payment.html" class="nav-cta">Soutenir</a>
     </div>
 
     <!-- Support -->
